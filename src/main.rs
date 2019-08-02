@@ -7,7 +7,7 @@ fn multiplicative_persistence(n: u32) -> Vec<u32> {
         let mut result: u32 = 1;
 
         for i in num_string.chars() {
-            result *= i.to_string().parse::<u32>().expect("Couldn't parse char to digit");
+            result *= i.to_digit(10).expect("Could not parse char to u32");
         }
 
         step_vec.push(result);
