@@ -16,11 +16,11 @@ fn multiplicative_persistence(n: u32) -> Vec<u32> {
     step_vec
 }
 
-fn main() {
-    for i in 1..=100_000 {
+fn run(numbers_to_check: u32, print_threshold: usize) {
+    for i in 1..=numbers_to_check {
         let result: Vec<u32> = multiplicative_persistence(i);
 
-        if result.len() >= 8 {
+        if result.len() >= print_threshold {
             println!("{}:", i);
 
             for (i, value) in result.iter().enumerate() {
@@ -30,4 +30,8 @@ fn main() {
             println!();
         }
     }
+}
+
+fn main() {
+    run(100_000, 7)
 }
