@@ -33,5 +33,5 @@ fn run(numbers_to_check: u32, print_threshold: usize) {
 }
 
 fn main() {
-    run(100_000, 7)
+    run(100_000, 7);
 }
