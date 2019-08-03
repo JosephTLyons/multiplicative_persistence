@@ -1,7 +1,6 @@
 fn multiplicative_persistence(n: u32) -> Vec<u32> {
     let mut num_string = n.to_string();
     let mut step_vec: Vec<u32> = Vec::new();
-    step_vec.push(n);
 
     while num_string.len() > 1 {
         let mut result: u32 = 1;
